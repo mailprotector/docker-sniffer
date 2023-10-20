@@ -1,4 +1,4 @@
-# sniffer
+# sniffer-docker
 Docker build of sniffer (aka snf-server) spam filtering engine.
 
 It should be noted that snf-server will ONLY ever listen for xci on localhost, and can not be configured to do otherwise.
