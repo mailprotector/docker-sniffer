@@ -1,12 +1,12 @@
-FROM debian:buster-slim
+FROM debian:bookworm-slim
 LABEL maintainer="devops@mailprotector.net"
 
 # Debian Base to use
-ENV DEBIAN_VERSION buster
+ENV DEBIAN_VERSION bookworm
 
-RUN echo "deb http://http.debian.net/debian/ $DEBIAN_VERSION main contrib non-free" > /etc/apt/sources.list && \
-    echo "deb http://http.debian.net/debian/ $DEBIAN_VERSION-updates main contrib non-free" >> /etc/apt/sources.list && \
-    echo "deb http://security.debian.org/ $DEBIAN_VERSION/updates main contrib non-free" >> /etc/apt/sources.list && \
+RUN echo "deb https://http.debian.org/debian/ $DEBIAN_VERSION main contrib non-free" > /etc/apt/sources.list && \
+    echo "deb https://http.debian.org/debian/ $DEBIAN_VERSION-updates main contrib non-free" >> /etc/apt/sources.list && \
+    echo "deb https://security.debian.org/ $DEBIAN_VERSION/updates main contrib non-free" >> /etc/apt/sources.list && \
     apt-get update && \
     apt-get install -y wget xinetd procps net-tools
 RUN cd /tmp && \
