@@ -24,7 +24,6 @@ touch "/var/log/snf-server/$LICENSE.log"
 
 # snf server
 echo "bootstrap: starting snfserver"
-#(while true; do ls -lah /usr/share/snf-server/storage/; sleep 30; done) &
 /usr/sbin/SNFServer /etc/snf-server/SNFServer.xml &
 
 # recognize PIDs

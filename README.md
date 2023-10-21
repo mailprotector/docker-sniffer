@@ -18,5 +18,7 @@ docker run --platform linux/amd64 -e LICENSE=<license_key> -e AUTH=<license_auth
 | RuleFilePath | /usr/share/snf-server/<license>.snf |
 
 ## Environment Variables
-`LICENSE`: sniffer vendor-provided license code for rulebase sync
-`AUTH`: sniffer vendor-provided auth token for rulebast sync
+| Name    | Description                                            |
+| ------- | ------------------------------------------------------ |
+| LICENSE | sniffer vendor-provided license code for rulebase sync |
+| AUTH    | sniffer vendor-provided auth token for rulebast sync   |
