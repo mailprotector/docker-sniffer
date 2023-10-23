@@ -26,6 +26,10 @@ touch "/var/log/snf-server/$LICENSE.log"
 echo "bootstrap: starting snfserver"
 /usr/sbin/SNFServer /etc/snf-server/SNFServer.xml &
 
+# snifferfy
+echo "bootstrap: starting snifferfy"
+/usr/sbin/snifferfy &
+
 # recognize PIDs
 pidlist=$(jobs -p)
 
