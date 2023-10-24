@@ -28,4 +28,4 @@ RUN ["touch", "/usr/share/snf-server/UpdateReady.txt"]
 RUN ["mkdir", "/usr/share/snf-server/storage"]
 
 CMD ["/bootstrap.sh"]
-EXPOSE 8080
+EXPOSE 38080

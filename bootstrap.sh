@@ -24,7 +24,7 @@ touch "/var/log/snf-server/$LICENSE.log"
 
 # snf server
 echo "bootstrap: starting snfserver"
-/usr/sbin/SNFServer /etc/snf-server/SNFServer.xml &
+/usr/sbin/SNFServer /etc/snf-server/SNFServer.xml &>/dev/null &
 
 # snifferfy
 echo "bootstrap: starting snifferfy"
