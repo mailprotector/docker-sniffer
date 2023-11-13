@@ -10,7 +10,7 @@ echo "bootstrap: setting sniffer license - $LICENSE"
 sed -i "s|licenseid|$LICENSE|g" "/tmp/getRulebase"
 
 echo "bootstrap: setting sniffer authentication - $AUTH"
-sed -i "s|authenticationxx|$AUTH|g" "/tmp/getRulebase"
+sed -i "s|authentication|$AUTH|g" "/tmp/getRulebase"
 
 echo "bootstrap: creating identity.xml"
 echo "<snf><identity licenseid=\"$LICENSE\" authentication=\"$AUTH\"/></snf>" > /etc/snf-server/identity.xml

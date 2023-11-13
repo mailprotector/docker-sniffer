@@ -21,4 +21,4 @@ docker run --platform linux/amd64 -e LICENSE=<license_key> -e AUTH=<license_auth
 | Name    | Description                                            |
 | ------- | ------------------------------------------------------ |
 | LICENSE | sniffer vendor-provided license code for rulebase sync |
-| AUTH    | sniffer vendor-provided auth token for rulebast sync   |
+| AUTH    | sniffer vendor-provided auth token for rulebase sync   |

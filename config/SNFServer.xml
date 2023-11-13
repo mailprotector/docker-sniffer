@@ -10,8 +10,8 @@
         <logs>
             <rotation localtime='no'/>
             <status>
-                <second log='yes' append='no'/>
-                <minute log='yes' append='no'/>
+                <second log='no' append='no'/>
+                <minute log='no' append='no'/>
                 <hour log='no' append='no'/>
             </status>
             <scan>
