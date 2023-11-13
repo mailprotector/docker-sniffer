@@ -49,14 +49,6 @@ jobs:
         with:
           registry: public.ecr.aws
 
-      - name: Cache Docker layers
-        uses: actions/cache@v3
-        with:
-          path: /tmp/.buildx-cache
-          key: ${{ runner.os }}-buildx-${{ github.sha }}
-          restore-keys: |
-            ${{ runner.os }}-buildx
-
       - name: Build image for ${{ matrix.aws-region }}
         uses: docker/build-push-action@v3
         with:
@@ -66,8 +58,6 @@ jobs:
           push: false
           load: true
           tags: ${{ env.image_tag }}
-          cache-from: type=local,src=/tmp/.buildx-cache
-          cache-to: type=local,dest=/tmp/.buildx-cache-new
 
       - name: Tag and Push image to AWS ECR ${{ matrix.aws-region }} as SHA
         env:
@@ -82,8 +72,3 @@ jobs:
         run: |
           docker tag ${{ env.image_tag }} ${{ env.ECR_URL }}
           docker push ${{ env.ECR_URL }}
-
-      - name: Move cache
-        run: |
-          rm -rf /tmp/.buildx-cache/
-          mv /tmp/.buildx-cache-new/ /tmp/.buildx-cache/

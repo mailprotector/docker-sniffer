@@ -28,7 +28,6 @@
                     <gbudb on-off='on'>X-GBUdb-Analysis</gbudb>
                     <result on-off='off'>X-MessageSniffer-Scan-Result</result>
                     <matches on-off='on'>X-MessageSniffer-Rules</matches>
-
                     <black on-off='off'>X-MessageSniffer-Spam: Yes</black>
                     <white on-off='off'>X-MessageSniffer-White: Yes</white>
                     <clean on-off='off'>X-MessageSniffer-Clean: Yes</clean>
